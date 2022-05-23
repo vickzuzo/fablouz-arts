@@ -1,0 +1,59 @@
+.shop_container {
+  width: 100%;
+  margin: 100px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.shop_item_container {
+  width: 30%;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0px;
+  cursor: pointer;
+  border-radius: 3px;
+  @media screen and (max-width: $desktop-breakpoint) {
+    width: 49%;
+    height: 300px;
+  }
+
+  &:hover {
+    & img {
+      transform: scale(1.2);
+    }
+    & .shop_item_details_container {
+      opacity: 1;
+    }
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+  }
+}
+
+.shop_item_others_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shop_item_details_container {
+  background: var(--primaryContainerColor);
+  padding: 10px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.4s ease;
+  & .shop_item_title {
+    font-size: 20px;
+    color: $yellow;
+  }
+}

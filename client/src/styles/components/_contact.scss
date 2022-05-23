@@ -1,0 +1,47 @@
+.contact_container {
+  margin: 100px 0px;
+  width: 100%;
+  background: var(--primaryContainerColor);
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.input_flex {
+  display: flex;
+  & .input_container:last-child {
+    // margin-left: 10px;
+    margin-left: 15px;
+  }
+}
+
+.input_container {
+  position: relative;
+  width: 100%;
+  color: var(--primaryTextColor);
+  // padding: 20px;
+  & input {
+    border: 1px solid var(--primaryBackgroundColor);
+    background: transparent;
+    padding: 12px 6px;
+    border-radius: 3px;
+    width: 100%;
+    &:focus {
+      border-color: $yellow;
+      ~ span {
+        color: $yellow;
+      }
+    }
+    margin: 30px 0px;
+  }
+  & span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.4s ease;
+    color: var(--secondaryTextColor);
+  }
+  & .input_button {
+    width: 100%;
+    @extend .custom_button;
+  }
+}

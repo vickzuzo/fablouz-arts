@@ -1,0 +1,36 @@
+.section_header_container {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: $desktop-breakpoint) {
+    justify-content: center;
+  }
+
+  padding: 75px 0px;
+
+  & .section_header_line {
+    height: 70px;
+    width: 2px;
+    background-color: $red;
+  }
+
+  & .section_header_text_holder {
+    padding: 0px 20px;
+    text-align: right;
+
+    & h1 {
+      font-size: 30px;
+      color: $red;
+      // font-family: "Courgette", cursive;
+      @media screen and (max-width: $desktop-breakpoint) {
+        font-size: 25px;
+      }
+    }
+    & p {
+      font-size: 18px;
+      color: var(--secondaryTextColor);
+      @media screen and (max-width: $desktop-breakpoint) {
+        font-size: 14px;
+      }
+    }
+  }
+}
